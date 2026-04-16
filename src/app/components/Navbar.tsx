@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Shield, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { AuditModal } from './AuditModal';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,10 +31,10 @@ export function Navbar() {
               </div>
             </div>
             <div>
-              <div className="text-xl font-bold text-white tracking-tight">
-                Maxtron Security Labs
+              <div className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                Maxtron Security
               </div>
-              <div className="text-xs text-gray-500 font-mono">Smart Contract Audits</div>
+              <div className="hidden sm:block text-xs text-gray-500 font-mono">Smart Contract Audits</div>
             </div>
           </a>
 
@@ -55,14 +56,16 @@ export function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            className="hidden md:block bg-blue-500 text-white px-6 py-2.5 font-semibold rounded-lg hover:bg-blue-400 transition-all hover:shadow-lg hover:shadow-blue-500/30"
-          >
-            Get Audit
-          </motion.button>
+          <AuditModal>
+            <motion.button
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              className="hidden md:block bg-blue-500 text-white px-6 py-2.5 font-semibold rounded-lg hover:bg-blue-400 transition-all hover:shadow-lg hover:shadow-blue-500/30 text-center"
+            >
+              Get Audit
+            </motion.button>
+          </AuditModal>
 
           {/* Mobile Menu Button */}
           <button
@@ -92,9 +95,14 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <button className="bg-blue-500 text-white px-6 py-3 font-semibold rounded-lg hover:bg-blue-400 transition-all mt-2">
-                Get Audit
-              </button>
+              <AuditModal>
+                <button 
+                  onClick={() => setIsOpen(false)}
+                  className="bg-blue-500 text-white px-6 py-3 font-semibold rounded-lg hover:bg-blue-400 transition-all mt-2 text-center"
+                >
+                  Get Audit
+                </button>
+              </AuditModal>
             </div>
           </motion.div>
         )}

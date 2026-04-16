@@ -7,10 +7,12 @@ import {
   CheckCircle2,
   AlertTriangle,
 } from "lucide-react";
+import { AuditModal } from "./AuditModal";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-[#0a0e1a] overflow-hidden pt-20">
+      {/* ... existing code ... */}
       {/* Advanced animated grid */}
       <motion.div
         className="absolute inset-0 opacity-[0.03]"
@@ -78,7 +80,7 @@ export function Hero() {
         />
       ))}
 
-      <div className="max-w-7xl mx-auto px-6 py-32 w-full relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-6 py-20 sm:py-28 md:py-32 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           {/* Left: Content */}
           <motion.div
@@ -90,18 +92,16 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 font-mono text-sm text-gray-500 mb-8 border border-blue-500/20 px-5 py-2.5 rounded-full bg-blue-500/5 backdrop-blur-sm"
+              className="w-fit inline-flex items-center gap-2 font-mono text-xs sm:text-sm text-gray-500 mb-6 sm:mb-8 border border-blue-500/20 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full bg-blue-500/5 backdrop-blur-sm whitespace-nowrap"
             >
-              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-              <span className="text-blue-400 font-semibold">
-                Live Audits Available
-              </span>
-              <span className="text-gray-700">•</span>
-              <span className="text-gray-400">&lt;24h response</span>
-              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-blue-400 shrink-0" />
+              <span className="text-blue-400 font-semibold">Live Audits</span>
+              <span className="text-gray-700 hidden xs:inline">•</span>
+              <span className="text-gray-400 hidden sm:inline">&lt;24h response</span>
+              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse shrink-0" />
             </motion.div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter mb-8 leading-[0.85]">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 sm:mb-8 leading-[0.9]">
               <motion.span
                 className="block text-white"
                 initial={{ opacity: 0, x: -30 }}
@@ -125,9 +125,8 @@ export function Hero() {
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
                 CONFIDENCE
-                {/* Enhanced glowing underline */}
                 <motion.div
-                  className="absolute -bottom-3 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-400 rounded-full shadow-lg shadow-blue-500/50"
+                  className="absolute -bottom-2 sm:-bottom-3 left-0 right-0 h-1 sm:h-1.5 bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-400 rounded-full shadow-lg shadow-blue-500/50"
                   initial={{ scaleX: 0, opacity: 0 }}
                   animate={{ scaleX: 1, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
@@ -140,10 +139,10 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-2xl md:text-3xl text-gray-400 leading-relaxed mb-12 max-w-xl font-light"
+              className="text-lg sm:text-2xl md:text-3xl text-gray-400 leading-relaxed mb-8 sm:mb-12 max-w-xl font-light"
             >
               Enterprise security audits for smart contracts.
-              <span className="text-white block mt-3 font-normal">
+              <span className="text-white block mt-2 sm:mt-3 font-normal">
                 Before they cost you millions.
               </span>
             </motion.p>
@@ -152,15 +151,19 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
             >
-              <button className="group relative bg-gradient-to-r from-blue-600 to-blue-500 text-white px-10 py-5 text-lg font-bold hover:from-blue-500 hover:to-blue-400 transition-all hover:shadow-2xl hover:shadow-blue-500/40 inline-flex items-center gap-3 justify-center overflow-hidden rounded-lg">
+            <AuditModal>
+              <button 
+                className="group relative w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold hover:from-blue-500 hover:to-blue-400 transition-all hover:shadow-2xl hover:shadow-blue-500/40 inline-flex items-center gap-3 justify-center overflow-hidden rounded-lg cursor-pointer"
+              >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 <span className="relative">Request Audit</span>
                 <ArrowRight className="w-5 h-5 relative group-hover:translate-x-1 transition-transform" />
               </button>
+            </AuditModal>
 
-              <button className="border-2 border-gray-800 text-gray-300 px-10 py-5 text-lg font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/5 transition-all inline-flex items-center gap-3 justify-center group rounded-lg">
+              <button className="w-full sm:w-auto border-2 border-gray-800 text-gray-300 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/5 transition-all inline-flex items-center gap-3 justify-center group rounded-lg">
                 <Shield className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
                 View Reports
               </button>

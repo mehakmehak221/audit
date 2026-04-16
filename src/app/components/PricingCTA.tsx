@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Check, Star, ArrowRight, Mail, DollarSign, Sparkles } from 'lucide-react';
+import { AuditModal } from './AuditModal';
 
 const plans = [
   {
@@ -163,13 +164,16 @@ export function PricingCTA() {
                   </div>
 
                   {/* CTA Button */}
-                  <button className={`w-full py-4 font-semibold rounded-lg transition-all ${
-                    plan.featured
-                      ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-500 hover:to-blue-400 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50'
-                      : 'border-2 border-gray-800 text-gray-300 hover:border-blue-500 hover:text-blue-400 hover:bg-blue-500/5'
-                  }`}>
-                    Get Quote
-                  </button>
+                  <AuditModal>
+                    <button 
+                      className={`block w-full py-4 font-semibold rounded-lg transition-all text-center cursor-pointer ${
+                      plan.featured
+                        ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-500 hover:to-blue-400 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50'
+                        : 'border-2 border-gray-800 text-gray-300 hover:border-blue-500 hover:text-blue-400 hover:bg-blue-500/5'
+                    }`}>
+                      Get Quote
+                    </button>
+                  </AuditModal>
                 </div>
               </motion.div>
             ))}
@@ -226,11 +230,15 @@ export function PricingCTA() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-                <button className="group relative bg-gradient-to-r from-blue-600 to-blue-500 text-white px-10 py-5 font-bold text-lg hover:from-blue-500 hover:to-blue-400 transition-all hover:shadow-2xl hover:shadow-blue-500/40 inline-flex items-center gap-3 justify-center rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                  <span className="relative">Request Audit</span>
-                  <ArrowRight className="w-5 h-5 relative group-hover:translate-x-1 transition-transform" />
-                </button>
+                <AuditModal>
+                  <button 
+                    className="group relative bg-gradient-to-r from-blue-600 to-blue-500 text-white px-10 py-5 font-bold text-lg hover:from-blue-500 hover:to-blue-400 transition-all hover:shadow-2xl hover:shadow-blue-500/40 inline-flex items-center gap-3 justify-center rounded-lg overflow-hidden cursor-pointer"
+                  >
+                    <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                    <span className="relative">Request Audit</span>
+                    <ArrowRight className="w-5 h-5 relative group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </AuditModal>
                 
                 <a 
                   href="mailto:support@maxtron.io"
