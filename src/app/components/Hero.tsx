@@ -163,10 +163,10 @@ export function Hero() {
               </button>
             </AuditModal>
 
-              <button className="w-full sm:w-auto border-2 border-gray-800 text-gray-300 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/5 transition-all inline-flex items-center gap-3 justify-center group rounded-lg">
+              {/* <button className="w-full sm:w-auto border-2 border-gray-800 text-gray-300 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/5 transition-all inline-flex items-center gap-3 justify-center group rounded-lg">
                 <Shield className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
                 View Reports
-              </button>
+              </button> */}
             </motion.div>
           </motion.div>
 
