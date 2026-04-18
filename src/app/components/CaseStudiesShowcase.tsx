@@ -4,8 +4,8 @@ import { Shield, TrendingUp, CheckCircle2 } from "lucide-react";
 const cases = [
   {
     project: "Ulalo",
-    type: "DeFi Protocol",
-    tvl: "$2M",
+    // type: "DeFi Protocol",
+    // tvl: "$2M",
     outcome:
       "All critical issues resolved pre-launch. Protocol successfully deployed with zero security incidents.",
     tech: ["Solidity", "ERC-20", "AMM", "Uniswap V2"],
@@ -14,8 +14,8 @@ const cases = [
   },
   {
     project: "Creator Console",
-    type: "NFT Marketplace",
-    tvl: "$1.2M",
+    // type: "NFT Marketplace",
+    // tvl: "$1.2M",
     outcome:
       "30% gas cost reduction achieved alongside security hardening. Optimized for high-volume trading.",
     tech: ["Solidity", "ERC-721", "ERC-1155", "IPFS"],
@@ -24,8 +24,8 @@ const cases = [
   },
   {
     project: "DexSwap",
-    type: "DEX Aggregator",
-    tvl: "$5M",
+    // type: "DEX Aggregator",
+    // tvl: "$5M",
     outcome:
       "Comprehensive security audit completed. Multiple attack vectors identified and patched before mainnet launch.",
     tech: ["Solidity", "Multi-chain", "Router V3"],
@@ -107,7 +107,7 @@ export function CaseStudiesShowcase() {
                   <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors mb-3">
                     {item.project}
                   </h3>
-                  <div className="flex items-center gap-3 text-sm">
+                  {/* <div className="flex items-center gap-3 text-sm">
                     <span className="text-gray-500 font-medium">
                       {item.type}
                     </span>
@@ -116,7 +116,7 @@ export function CaseStudiesShowcase() {
                       <TrendingUp className="w-3.5 h-3.5" />
                       {item.tvl}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Outcome */}
