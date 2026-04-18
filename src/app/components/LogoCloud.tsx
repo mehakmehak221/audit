@@ -28,9 +28,9 @@ export function LogoCloud() {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center"
         >
-          <h2 className="text-center text-[10px] sm:text-xs font-bold leading-8 text-gray-500 font-mono tracking-[0.3em] uppercase mb-10">
+          {/* <h2 className="text-center text-[10px] sm:text-xs font-bold leading-8 text-gray-500 font-mono tracking-[0.3em] uppercase mb-10">
             Trust Partners
-          </h2>
+          </h2> */}
           
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-24">
             {logos.map((logo, index) => (
