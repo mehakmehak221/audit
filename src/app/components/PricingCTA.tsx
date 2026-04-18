@@ -241,11 +241,11 @@ export function PricingCTA() {
                 </AuditModal>
                 
                 <a 
-                  href="mailto:support@maxtron.io"
+                  href="mailto:business@maxtron.ai"
                   className="border-2 border-gray-700 text-gray-300 px-10 py-5 font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/5 transition-all inline-flex items-center gap-3 justify-center group rounded-lg"
                 >
                   <Mail className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
-                  support@maxtron.io
+                  business@maxtron.ai
                 </a>
               </div>
 

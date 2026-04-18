@@ -17,8 +17,8 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-2 text-gray-400 hover:text-blue-500 transition-colors group">
               <Mail className="w-4 h-4 group-hover:text-blue-500 transition-colors" />
-              <a href="mailto:support@maxtron.io" className="font-mono text-sm">
-                support@maxtron.io
+              <a href="mailto:business@maxtron.ai" className="font-mono text-sm">
+              business@maxtron.ai
               </a>
             </div>
           </div>
