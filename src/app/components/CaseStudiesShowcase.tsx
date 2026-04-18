@@ -3,7 +3,7 @@ import { Shield, TrendingUp, CheckCircle2 } from "lucide-react";
 
 const cases = [
   {
-    project: "Ualalo",
+    project: "Ulalo",
     type: "DeFi Protocol",
     tvl: "$2M",
     outcome:
