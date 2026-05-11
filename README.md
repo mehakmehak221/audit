@@ -1,11 +1,30 @@
 
-  # Design Unique Dark Homepage (Copy) (Copy) (Copy)
+# Smart Audit
 
-  This is a code bundle for Design Unique Dark Homepage (Copy) (Copy) (Copy). The original project is available at https://www.figma.com/design/HCT35n6Ua6LEfvGgUMwMZb/Design-Unique-Dark-Homepage--Copy---Copy---Copy-.
+Dark-themed audit service landing page built with Vite + React + TypeScript and Tailwind CSS.
 
-  ## Running the code
+## Getting started
 
-  Run `npm i` to install the dependencies.
+Install dependencies:
 
-  Run `npm run dev` to start the development server.
-  
+```bash
+npm i
+```
+
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Project structure
+
+- `index.html`: app entry HTML
+- `src/main.tsx`: React root
+- `src/app/App.tsx`: page layout (Navbar, Hero, sections, Footer)
